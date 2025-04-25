@@ -8,6 +8,8 @@ import React from "react"; // Import React explicitly
 import Index from "./pages/Index";
 import Uslugi from "./pages/Uslugi";
 import Funkcje from "./pages/Funkcje";
+import Cennik from "./pages/Cennik";
+import Kontakt from "./pages/Kontakt";
 import SpecialOffer from "./pages/SpecialOffer";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +28,8 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/uslugi" element={<Uslugi />} />
               <Route path="/funkcje" element={<Funkcje />} />
+              <Route path="/cennik" element={<Cennik />} />
+              <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/oferta-specjalna" element={<SpecialOffer />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
