@@ -8,6 +8,8 @@ import QuickStartPaths from '@/components/resources/QuickStartPaths';
 import PopularArticles from '@/components/resources/PopularArticles';
 import SupportSection from '@/components/resources/SupportSection';
 import ResourcesCta from '@/components/resources/ResourcesCta';
+import { Navbar } from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 const Resources = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,6 +20,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
       <ResourcesHero />
 
       <div className="container mx-auto px-4 py-8">
@@ -40,6 +43,7 @@ const Resources = () => {
         <SupportSection />
         <ResourcesCta />
       </div>
+      <Footer />
     </div>
   );
 };

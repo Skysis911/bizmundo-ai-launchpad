@@ -1,10 +1,9 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from "react"; // Import React explicitly
+import React from "react";
 import Index from "./pages/Index";
 import Uslugi from "./pages/Uslugi";
 import Funkcje from "./pages/Funkcje";
@@ -15,8 +14,8 @@ import NotFound from "./pages/NotFound";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetails from "./pages/CaseStudyDetails";
 import Resources from "./pages/Resources";
+import About from "./pages/About";
 
-// Create a client outside of the component
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -37,7 +36,7 @@ const App = () => {
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
               <Route path="/zasoby" element={<Resources />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="/o-nas" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
