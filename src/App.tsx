@@ -12,6 +12,9 @@ import Cennik from "./pages/Cennik";
 import Kontakt from "./pages/Kontakt";
 import SpecialOffer from "./pages/SpecialOffer";
 import NotFound from "./pages/NotFound";
+import CaseStudies from "./pages/CaseStudies";
+import CaseStudyDetails from "./pages/CaseStudyDetails";
+import Resources from "./pages/Resources";
 
 // Create a client outside of the component
 const queryClient = new QueryClient();
@@ -31,6 +34,9 @@ const App = () => {
               <Route path="/cennik" element={<Cennik />} />
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/oferta-specjalna" element={<SpecialOffer />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/case-studies/:slug" element={<CaseStudyDetails />} />
+              <Route path="/zasoby" element={<Resources />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
