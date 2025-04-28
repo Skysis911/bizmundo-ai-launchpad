@@ -48,6 +48,9 @@ const Navbar = () => {
             <Link to="/zasoby" className="text-sm font-medium hover:text-primary transition-colors">
               Zasoby
             </Link>
+            <Link to="/o-nas" className="text-sm font-medium hover:text-primary transition-colors">
+              O nas
+            </Link>
             <Link to="/kontakt" className="text-sm font-medium hover:text-primary transition-colors">
               Kontakt
             </Link>
@@ -58,7 +61,7 @@ const Navbar = () => {
             <Button variant="outline" className="text-primary border border-primary hover:bg-primary/10">
               Zarezerwuj demo
             </Button>
-            <Button className="bg-primary hover:bg-primary-dark text-white">
+            <Button className="bg-primary hover:bg-primary-dark text-white animate-pulse">
               Rozpocznij darmowy okres próbny
             </Button>
           </div>
@@ -143,6 +146,13 @@ const Navbar = () => {
                 Zasoby
               </Link>
               <Link
+                to="/o-nas"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-4 py-2 text-sm font-medium hover:bg-gray-50 rounded-md"
+              >
+                O nas
+              </Link>
+              <Link
                 to="/kontakt"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-4 py-2 text-sm font-medium hover:bg-gray-50 rounded-md"
@@ -156,7 +166,7 @@ const Navbar = () => {
                 >
                   Zarezerwuj demo
                 </Button>
-                <Button className="w-full bg-primary hover:bg-primary-dark text-white">
+                <Button className="w-full bg-primary hover:bg-primary-dark text-white animate-pulse">
                   Rozpocznij darmowy okres próbny
                 </Button>
               </div>
