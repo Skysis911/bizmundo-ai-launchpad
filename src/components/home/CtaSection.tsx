@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const CtaSection = () => {
   return (
@@ -19,7 +18,8 @@ const CtaSection = () => {
             <Button 
               size="lg" 
               variant="default" 
-              className="bg-white hover:bg-gray-100 text-primary font-medium px-8 py-6 text-lg animate-pulse-light"
+              className="bg-white hover:bg-gray-100 text-primary font-medium px-8 py-6 text-lg animate-pulse"
+              onClick={() => window.location.href = 'https://app.bizmundo.ai/register'}
             >
               Rozpocznij darmowy okres próbny
             </Button>
@@ -27,6 +27,7 @@ const CtaSection = () => {
               size="lg" 
               variant="outline" 
               className="border-2 border-white text-white hover:bg-white/10 font-medium px-8 py-6 text-lg"
+              onClick={() => window.location.href = 'https://app.bizmundo.ai/register'}
             >
               Zarezerwuj demo
             </Button>

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -9,10 +9,19 @@ import {
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 
-const CaseStudiesFilter = () => {
-  const [industryFilter, setIndustryFilter] = useState('Wszystkie branże');
-  const [goalFilter, setGoalFilter] = useState('Wszystkie cele');
-  
+interface CaseStudiesFilterProps {
+  selectedIndustry: string;
+  selectedGoal: string;
+  onIndustryChange: (industry: string) => void;
+  onGoalChange: (goal: string) => void;
+}
+
+const CaseStudiesFilter: React.FC<CaseStudiesFilterProps> = ({
+  selectedIndustry,
+  selectedGoal,
+  onIndustryChange,
+  onGoalChange
+}) => {
   const industries = [
     'Wszystkie branże',
     'E-commerce',
@@ -37,14 +46,14 @@ const CaseStudiesFilter = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" className="w-full sm:w-auto">
-                  {industryFilter} <ChevronDown className="ml-2 h-4 w-4" />
+                  {selectedIndustry} <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {industries.map((industry) => (
                   <DropdownMenuItem 
                     key={industry}
-                    onClick={() => setIndustryFilter(industry)}
+                    onClick={() => onIndustryChange(industry)}
                   >
                     {industry}
                   </DropdownMenuItem>
@@ -57,14 +66,14 @@ const CaseStudiesFilter = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" className="w-full sm:w-auto">
-                  {goalFilter} <ChevronDown className="ml-2 h-4 w-4" />
+                  {selectedGoal} <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {goals.map((goal) => (
                   <DropdownMenuItem 
                     key={goal}
-                    onClick={() => setGoalFilter(goal)}
+                    onClick={() => onGoalChange(goal)}
                   >
                     {goal}
                   </DropdownMenuItem>
