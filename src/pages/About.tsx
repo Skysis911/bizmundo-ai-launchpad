@@ -3,6 +3,7 @@ import React from 'react';
 import AboutHero from '@/components/about/AboutHero';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
       <Navbar />
       <AboutHero />
       <div className="container mx-auto px-4 py-12">
+        {/* Mission, Vision, Goals Section */}
         <h2 className="text-3xl font-bold text-center mb-12" id="misja">Nasza misja, wizja i cel</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -22,10 +24,11 @@ const About = () => {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-bold mb-4 text-primary">Cel 2025→2027</h3>
-            <p>Wsparcie > 100 000 polskich firm w efektywnym wdrożeniu AI oraz redukcja ich kosztów marketingu o min. 30%.</p>
+            <p>Wsparcie {'>'} 100 000 polskich firm w efektywnym wdrożeniu AI oraz redukcja ich kosztów marketingu o min. 30%.</p>
           </div>
         </div>
 
+        {/* Timeline Section */}
         <h2 className="text-3xl font-bold text-center mb-12" id="historia">Nasza historia</h2>
         <div className="relative mx-auto mb-16">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary"></div>
@@ -69,6 +72,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Team Leadership Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Zespół liderów</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="flex flex-col items-center">
@@ -97,10 +101,11 @@ const About = () => {
           </div>
         </div>
 
+        {/* Values Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Nasze wartości</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="p-6 bg-white rounded-lg shadow-md">
-            <h3 className="font-bold text-xl mb-3 text-primary">Klient > Feature</h3>
+            <h3 className="font-bold text-xl mb-3 text-primary">Klient {'>'} Feature</h3>
             <p>Najpierw rozwiązujemy problem, potem budujemy funkcję.</p>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md">
@@ -121,6 +126,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Technology & Security Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Technologia & bezpieczeństwo</h2>
         <div className="bg-white p-8 rounded-lg shadow-md mb-16">
           <ul className="list-disc pl-6 space-y-3">
@@ -131,6 +137,7 @@ const About = () => {
           </ul>
         </div>
 
+        {/* Partners Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Partnerzy & integracje</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {Array.from({ length: 8 }).map((_, idx) => (
@@ -143,6 +150,7 @@ const About = () => {
           ))}
         </div>
 
+        {/* CSR Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Społeczna odpowiedzialność (CSR)</h2>
         <div className="bg-white p-8 rounded-lg shadow-md mb-16">
           <p className="text-lg mb-6">
@@ -150,6 +158,7 @@ const About = () => {
           </p>
         </div>
 
+        {/* Stats Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Liczby, które mówią wszystko</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="p-6 bg-white rounded-lg shadow-md text-center">
@@ -170,6 +179,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Awards Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Nagrody & media</h2>
         <div className="bg-white p-8 rounded-lg shadow-md mb-16">
           <ul className="list-disc pl-6 space-y-3">
@@ -179,6 +189,7 @@ const About = () => {
           </ul>
         </div>
 
+        {/* Careers Section */}
         <h2 className="text-3xl font-bold text-center mb-12">Kariera</h2>
         <div className="text-center mb-6">
           <p className="text-xl mb-8">Chcesz budować przyszłość małego biznesu? Dołącz do nas!</p>
@@ -198,12 +209,13 @@ const About = () => {
           </div>
         </div>
 
+        {/* CTA Section */}
         <div className="bg-primary text-white p-12 rounded-lg text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Jesteśmy gotowi, by rozwijać Twój biznes – a Ty?</h2>
           <p className="text-lg mb-8">Dołącz do BizMundo.ai i korzystaj z mocy AI wspieranej przez ludzi, którym zależy.</p>
-          <button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md font-bold animate-pulse">
+          <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-md font-bold animate-pulse">
             Rozpocznij darmowy okres próbny
-          </button>
+          </Button>
         </div>
       </div>
       <Footer />
